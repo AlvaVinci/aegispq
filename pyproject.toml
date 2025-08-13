@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aegispq"
+version = "0.1.0"
+description = "AegisPQ: Post-Quantum file encryption (ML-KEM + AES-GCM) with optional ML-DSA signing"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "AegisPQ Maintainers"}]
+requires-python = ">=3.9"
+dependencies = ["pycryptodome>=3.19"]
+
+[project.scripts]
+aegispq = "aegispq.cli:main"
+
+[tool.setuptools]
+packages = ["aegispq"]
